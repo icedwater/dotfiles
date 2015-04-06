@@ -1,0 +1,26 @@
+#!/bin/sh
+
+case "$1" in
+    *.extension)
+    extension-handler "$1"
+    ;;
+
+    *.json)
+    cat "$1" | aeson-pretty
+    ;;
+
+    *.mp4)
+    mplayer -nosound "$1" -ss 9000 2>/dev/null |\
+    grep \: |\
+    grep -v A\: |\
+    grep -v V\:
+    ;;
+
+    *)
+    
+    # We don't handle this format.
+    exit 1
+esac
+
+# No further processing by lesspipe necessary
+exit 0
