@@ -7,7 +7,6 @@ set background=dark
 set smartindent
 set autoindent
 
-" tabbing, python style
 set shiftwidth=4
 set expandtab
 set smarttab
@@ -26,4 +25,5 @@ set textwidth=140  " testing tweet constraints
 let twitvim_enable_python = 1
 let twitvim_browser_cmd = '/usr/bin/firefox'
 
+filetype indent on
 filetype plugin on
