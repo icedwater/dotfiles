@@ -22,5 +22,6 @@ set colorcolumn=80,140
 " set textwidth=80
 set textwidth=140  " testing tweet constraints
 
-" how can I open a separate pane for tweets in vim?
-" twitvim is worth exploring
+" testing twitvim
+let twitvim_enable_python = 1
+let twitvim_browser_cmd = '/usr/bin/firefox'
