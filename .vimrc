@@ -25,3 +25,5 @@ set textwidth=140  " testing tweet constraints
 " testing twitvim
 let twitvim_enable_python = 1
 let twitvim_browser_cmd = '/usr/bin/firefox'
+
+filetype plugin on
