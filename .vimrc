@@ -17,9 +17,8 @@ set ruler
 set autowrite
 
 " break lines at 80 and draw a line at char 81
-set colorcolumn=80,140
-" set textwidth=80
-set textwidth=140  " testing tweet constraints
+set colorcolumn=+1
+set textwidth=80
 
 " testing twitvim
 let twitvim_enable_python = 1
@@ -27,3 +26,11 @@ let twitvim_browser_cmd = '/usr/bin/firefox'
 
 filetype indent on
 filetype plugin on
+
+" playing with autocmd to set textwidth to 80
+" for text files and 140 for tweet (.twt) files
+augroup tweetStuff
+    autocmd!
+    autocmd BufRead,BufNewFile *.twt set filetype=tweet
+    autocmd filetype tweet setlocal textwidth=140
+augroup END
