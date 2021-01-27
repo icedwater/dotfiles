@@ -20,6 +20,3 @@ set autowrite
 " break lines at 80 and draw a line at char 81
 set colorcolumn=+1
 set textwidth=80
-
-" how can I open a separate pane for tweets in vim?
-" twitvim is worth exploring
