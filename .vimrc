@@ -33,6 +33,7 @@ let twitvim_browser_cmd = '/usr/bin/firefox'
 
 """ undofile
 set undofile
+set undodir=$HOME/.vim/undo
 
 """ mappings for fzf
 nnoremap <C-p> :<C-u>FZF<CR>
