@@ -1,7 +1,6 @@
 " beginnings of the most excellent vimrc ever
 " icedwater said somewhat humbly
 
-set filetype=off
 set background=dark
 
 set smartindent
@@ -23,3 +22,6 @@ set hlsearch
 " break lines at 80 and draw a line at char 81
 set colorcolumn=+1
 set textwidth=80
+
+filetype indent on
+filetype plugin on
