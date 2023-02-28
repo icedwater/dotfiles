@@ -1,6 +1,7 @@
 " beginnings of the most excellent vimrc ever
 " icedwater said somewhat humbly
 
+""" sections under such lines are from modern vim (isbn: 978-1-68050-262-6)
 set background=dark
 
 set smartindent
@@ -29,6 +30,31 @@ filetype plugin on
 " testing twitvim
 let twitvim_enable_python = 1
 let twitvim_browser_cmd = '/usr/bin/firefox'
+
+""" undofile
+set undofile
+
+""" mappings for fzf
+nnoremap <C-p> :<C-u>FZF<CR>
+
+""" async lint engine
+let g:ale_linters = {
+    \ "javascript": ["eslint"],
+    \ "python": ["pylint"],
+    \}
+
+""" minimal package manager for vim
+packadd minpac
+call minpac#init()
+
+command! MinUp call minpac#update()
+command! MinClean call minpac#clean()
+
+""" here's a list of plugins minpac manages
+call minpac#add("tpope/vim-unimpaired")
+call minpac#add("liuchengxu/graphviz.vim")
+call minpac#add("junegunn/fzf")
+call minpac#add("w0rp/ale")
 
 """""" below is the autocmd stuff
 
@@ -67,4 +93,10 @@ augroup latex
     autocmd!
     autocmd BufRead,BufNewFile *.tex set filetype=latex
     autocmd filetype latex nnoremap <F2> :!pdflatex %
+augroup END
+
+""" noundofile for /tmp/* stuff
+augroup vimrc
+    autocmd!
+    autocmd BufWritePre /tmp/* setlocal noundofile
 augroup END
