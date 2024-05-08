@@ -52,6 +52,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 2 && xbacklight > ~/.config/b
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# start a browser
+bindsym $mod+Shift+z exec x-www-browser
+
 # start a terminal
 bindsym $mod+z exec i3-sensible-terminal
 
@@ -226,14 +229,13 @@ bindsym --release Print exec --no-startup-id gnome-screenshot
 bindsym --release $mod+Print exec --no-startup-id gnome-screenshot -a
 bindsym --release $mod+Shift+Print exec --no-startup-id gnome-screenshot -ca
 bindsym --release Mod1+Print exec --no-startup-id gnome-screenshot -w
+bindsym --release $mod+Shift+w exec --no-startup-id ~/.fehbg
 
-exec --no-startup-id firefox
-exec --no-startup-id i3-sensible-terminal
 exec --no-startup-id blueman-applet
 
 # try to push workspace 4 to second screen
 # what happens when there is no HDMI1?
-workspace 4 output HDMI1
+workspace 2 output HDMI1
 
 client.unfocused  #55005599 #33003399 #1f1f1f #22002299
 client.focused  #aa00aacc #770077cc #ffffff #220022cc
