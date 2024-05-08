@@ -12,6 +12,9 @@ set shiftwidth=4
 set expandtab
 set smarttab
 
+" line numbers
+set number
+
 " testing stuff from
 " thoughtbot/dotfiles on github
 set ruler
@@ -26,10 +29,6 @@ set textwidth=80
 
 filetype indent on
 filetype plugin on
-
-" testing twitvim
-let twitvim_enable_python = 1
-let twitvim_browser_cmd = '/usr/bin/firefox'
 
 """ undofile
 set undofile
@@ -52,10 +51,36 @@ command! MinUp call minpac#update()
 command! MinClean call minpac#clean()
 
 """ here's a list of plugins minpac manages
-call minpac#add("tpope/vim-unimpaired")
 call minpac#add("liuchengxu/graphviz.vim")
 call minpac#add("junegunn/fzf")
 call minpac#add("w0rp/ale")
+call minpac#add("vimwiki/vimwiki")
+
+call minpac#add("tricktux/pomodoro.vim")
+call minpac#add("powerman/vim-plugin-AnsiEsc")
+
+call minpac#add("preservim/vim-markdown")
+call minpac#add("tpope/vim-fugitive")
+call minpac#add("mhinz/vim-signify")
+call minpac#add("iamcco/markdown-preview.nvim", {"do": "packloadall! | call mkdp#util#install()"})
+
+""" colour schemes
+call minpac#add("wadackel/vim-dogrun")
+
+" iamcco/markdown-preview.nvim
+let g:mkdp_auto_start = 1
+let g:mkdp_auto_close = 1
+let g:mkdp_refresh_slow = 0
+let g_mkdp_markdown_css = expand("~/.local/lib/markdown-css/github-markdown-dark.css")
+
+" vimwiki/vimwiki
+" I use .md for other stuff and I don't want it to be flagged as a vimwiki
+let g:vimwiki_list = [{"path": expand("~/vimwiki"), "syntax": "markdown", "ext": ".wiki"}]
+let g:vimwiki_ext2syntax = {".wiki": "markdown"}
+let g:vimwiki_markdown_link_ext = 1
+
+" preservim/vim-markdown
+let g:markdown_folding = 1
 
 """""" below is the autocmd stuff
 
@@ -101,3 +126,6 @@ augroup vimrc
     autocmd!
     autocmd BufWritePre /tmp/* setlocal noundofile
 augroup END
+
+"" colorscheme
+colorscheme dogrun
