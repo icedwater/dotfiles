@@ -5,3 +5,5 @@ else
     xrandr --output eDP1 --primary;
     xrandr --output HDMI1 --off;
 fi
+
+. ~/.fehbg
