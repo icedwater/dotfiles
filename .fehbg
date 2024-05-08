@@ -1,0 +1,7 @@
+#!/bin/sh
+
+PICS_FOLDER='/path/to/Pictures'
+
+feh --no-fehbg --randomize \
+    --bg-center ${PICS_FOLDER} \
+    --bg-fill ${PICS_FOLDER}
