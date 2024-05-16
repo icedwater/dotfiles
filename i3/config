@@ -53,7 +53,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 2 && xbacklight > ~/.config/b
 floating_modifier $mod
 
 # start a browser
-bindsym $mod+Shift+z exec x-www-browser
+bindsym $mod+Shift+z exec brave --incognito
 
 # start a terminal
 bindsym $mod+z exec i3-sensible-terminal
