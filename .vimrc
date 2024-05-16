@@ -52,12 +52,12 @@ command! MinClean call minpac#clean()
 
 """ here's a list of plugins minpac manages
 call minpac#add("liuchengxu/graphviz.vim")
-call minpac#add("junegunn/fzf")
+"call minpac#add("junegunn/fzf")
 call minpac#add("w0rp/ale")
 call minpac#add("vimwiki/vimwiki")
 
-call minpac#add("tricktux/pomodoro.vim")
-call minpac#add("powerman/vim-plugin-AnsiEsc")
+"call minpac#add("tricktux/pomodoro.vim")
+"call minpac#add("powerman/vim-plugin-AnsiEsc")
 
 call minpac#add("preservim/vim-markdown")
 call minpac#add("tpope/vim-fugitive")
