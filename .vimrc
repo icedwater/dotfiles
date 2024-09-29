@@ -8,12 +8,18 @@ set smartindent
 set autoindent
 
 " tabbing, python style
+set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set expandtab
 set smarttab
 
 " line numbers
 set number
+
+" split to the right and down
+set splitright
+set splitbelow
 
 " testing stuff from
 " thoughtbot/dotfiles on github
@@ -22,6 +28,9 @@ set autowrite
 
 " highlight what you've been searching for
 set hlsearch
+
+" show line below the current line where cursor is
+set cursorline
 
 " break lines at 80 and draw a line at char 81
 set colorcolumn=+1
