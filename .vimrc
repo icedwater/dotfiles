@@ -78,11 +78,20 @@ let g_mkdp_markdown_css = expand("~/.local/lib/markdown-css/github-markdown-dark
 let g:vimwiki_list = [{"path": expand("~/vimwiki"), "syntax": "markdown", "ext": ".wiki"}]
 let g:vimwiki_ext2syntax = {".wiki": "markdown"}
 let g:vimwiki_markdown_link_ext = 1
+noremap <F3> :VimwikiDiaryPrevDay <CR>
+noremap <F4> :VimwikiDiaryNextDay <CR>
 
 " preservim/vim-markdown
 let g:markdown_folding = 1
 
 """""" below is the autocmd stuff
+
+" vimwiki special commands?
+augroup vimwiki
+    autocmd!
+    autocmd BufRead,BufNewFile *.wiki set filetype=vimwiki
+    autocmd filetype vimwiki setlocal ai si expandtab shiftwidth=2
+augroup END
 
 " playing with autocmd to set textwidth to 80
 " for text files and 140 for tweet (.twt) files
