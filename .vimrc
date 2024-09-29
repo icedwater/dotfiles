@@ -64,6 +64,7 @@ call minpac#add("liuchengxu/graphviz.vim")
 "call minpac#add("junegunn/fzf")
 call minpac#add("w0rp/ale")
 call minpac#add("vimwiki/vimwiki")
+call minpac#add("tmhedberg/SimpylFold")
 
 "call minpac#add("tricktux/pomodoro.vim")
 "call minpac#add("powerman/vim-plugin-AnsiEsc")
