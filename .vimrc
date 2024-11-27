@@ -16,6 +16,10 @@ set smarttab
 " line numbers
 set number
 
+" split to the right and down
+set splitbelow
+set splitright
+
 " testing stuff from
 " thoughtbot/dotfiles on github
 set ruler
