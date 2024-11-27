@@ -24,10 +24,6 @@ set autowrite
 " highlight what you've been searching for
 set hlsearch
 
-" break lines at 80 and draw a line at char 81
-set colorcolumn=+1
-set textwidth=80
-
 filetype indent on
 filetype plugin on
 
@@ -84,14 +80,6 @@ let g:vimwiki_markdown_link_ext = 1
 let g:markdown_folding = 1
 
 """""" below is the autocmd stuff
-
-" playing with autocmd to set textwidth to 80
-" for text files and 140 for tweet (.twt) files
-augroup tweetStuff
-    autocmd!
-    autocmd BufRead,BufNewFile *.twt set filetype=tweet
-    autocmd filetype tweet setlocal textwidth=140
-augroup END
 
 " group definition for CSV files
 augroup csv
