@@ -72,6 +72,7 @@ call minpac#add("wadackel/vim-dogrun")
 let g:mkdp_auto_start = 1
 let g:mkdp_auto_close = 1
 let g:mkdp_refresh_slow = 0
+let g:mkdp_combine_preview = 1
 let g_mkdp_markdown_css = expand("~/.local/lib/markdown-css/github-markdown-dark.css")
 
 " vimwiki/vimwiki
