@@ -35,15 +35,6 @@ filetype plugin on
 set undofile
 set undodir=$HOME/.vim/undo
 
-""" mappings for fzf
-nnoremap <C-p> :<C-u>FZF<CR>
-
-""" async lint engine
-let g:ale_linters = {
-    \ "javascript": ["eslint"],
-    \ "python": ["pylint"],
-    \}
-
 """ minimal package manager for vim
 packadd minpac
 call minpac#init()
@@ -67,6 +58,15 @@ call minpac#add("iamcco/markdown-preview.nvim", {"do": "packloadall! | call mkdp
 
 """ colour schemes
 call minpac#add("wadackel/vim-dogrun")
+
+""" mappings for fzf
+nnoremap <C-p> :<C-u>FZF<CR>
+
+""" async lint engine
+let g:ale_linters = {
+    \ "javascript": ["eslint"],
+    \ "python": ["pylint"],
+    \}
 
 " iamcco/markdown-preview.nvim
 let g:mkdp_auto_start = 1
