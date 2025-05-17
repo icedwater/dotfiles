@@ -67,6 +67,9 @@ let g:ale_linters = {
     \ "javascript": ["eslint"],
     \ "python": ["pylint"],
     \}
+let g:ale_completion_enabled = 1
+let g:ale_lint_on_text_changed = 'always'
+let g:ale_lint_delay = 600
 
 " iamcco/markdown-preview.nvim
 let g:mkdp_auto_start = 1
