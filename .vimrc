@@ -42,22 +42,12 @@ call minpac#init()
 command! MinUp call minpac#update()
 command! MinClean call minpac#clean()
 
+
 """ here's a list of plugins minpac manages
-call minpac#add("liuchengxu/graphviz.vim")
-"call minpac#add("junegunn/fzf")
-call minpac#add("w0rp/ale")
-call minpac#add("vimwiki/vimwiki")
-
-"call minpac#add("tricktux/pomodoro.vim")
-"call minpac#add("powerman/vim-plugin-AnsiEsc")
-
-call minpac#add("preservim/vim-markdown")
-call minpac#add("tpope/vim-fugitive")
-call minpac#add("mhinz/vim-signify")
-call minpac#add("iamcco/markdown-preview.nvim", {"do": "packloadall! | call mkdp#util#install()"})
+""" yes, none - they were all moved to use vim native plugins
 
 """ colour schemes
-call minpac#add("wadackel/vim-dogrun")
+""" dogrun, also using vim native plugins
 
 """ mappings for fzf
 nnoremap <C-p> :<C-u>FZF<CR>
