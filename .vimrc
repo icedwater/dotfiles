@@ -42,6 +42,12 @@ call minpac#init()
 command! MinUp call minpac#update()
 command! MinClean call minpac#clean()
 
+""" pre-configure ALE here
+let g:ale_completion_enabled = 1
+let g:ale_completion_max_suggestions = 20
+let g:ale_cursor_detail = 1
+let g:ale_echo_delay = 250
+let g:ale_completion_delay = 250
 
 """ here's a list of plugins minpac manages
 """ yes, none - they were all moved to use vim native plugins
@@ -57,7 +63,6 @@ let g:ale_linters = {
     \ "javascript": ["eslint"],
     \ "python": ["pylint"],
     \}
-let g:ale_completion_enabled = 1
 let g:ale_lint_on_text_changed = 'always'
 let g:ale_lint_delay = 600
 
